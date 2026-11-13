@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-blockchainiq"
+version = "0.1.0"
+description = "LangChain tools for the Blockchain IQ x402 pay-per-call crypto data API (USDC on Base, no API key)"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Adzi Hadzmi" }]
+requires-python = ">=3.10"
+dependencies = [
+    "langchain-core>=0.3",
+    "requests>=2.32",
+    "eth-account>=0.13",
+]
+keywords = ["langchain", "x402", "crypto", "agents", "usdc", "base"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://www.blockchainiq.co/agents"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
